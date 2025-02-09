@@ -1,0 +1,4 @@
+jupyterlab==4.2.5
+tensorflow==2.18.0
+tensorflow-metal==1.2.0
+pandas==2.2.3
