@@ -11,9 +11,9 @@ def save_image(img_array, path):
 def preprocess_image(img_array):
 
     # threshold 
-    img_array[img_array < 20] = 0
-    img_array[img_array > 120] = 255
-    
+    img_array[img_array < 20] = 0       # everything that's too dark becomes flat black
+    img_array[img_array > 120] = 255    # everything that's too bright becomes flat white
+
     return img_array
 
 def preprocess_files(root, target_path):
