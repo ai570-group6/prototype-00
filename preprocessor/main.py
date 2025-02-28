@@ -17,7 +17,7 @@ def preprocess_image(img_array):
     return img_array
 
 def preprocess_files(root, target_path):
-    for path in glob.glob(root + '/*'):
+    for path in glob.glob(os.path.join(root, '*')):
         print(path)
         img = Image.open(path)
         img_array = np.array(img)
