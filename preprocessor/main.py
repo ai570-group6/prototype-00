@@ -9,9 +9,11 @@ def save_image(img_array, path):
     img.save(path)
 
 def preprocess_image(img_array):
-    print(img_array.shape)
+
+    # threshold 
     img_array[img_array < 20] = 0
     img_array[img_array > 120] = 255
+    
     return img_array
 
 def preprocess_files(root, target_path):
